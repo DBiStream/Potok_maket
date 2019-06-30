@@ -1,0 +1,487 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage">
+<head itemscope itemtype="http://schema.org/WPHeader">
+
+    <title  itemprop="headline">Поток - сервис для доставки посылок в пригород</title>
+    <meta  name="description" itemprop="description" content="">
+    <base href="http://teleport-tax.ru/" />
+    <meta charset="UTF-8" />
+<link type="text/css" rel="StyleSheet" href="/assets/style.css" />
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://teleport-tax.ru/assets/modal.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext');
+body{overflow-x: hidden;font-size:16px;margin:0px;}
+body{
+font-family: PT Sans Narrow;
+font-style: normal;}
+.top-menu {
+    text-align: right;
+    padding-top: 1rem;
+    padding-right: 0.8rem;
+}
+.top-menu .phone{
+    font-weight: normal;
+    font-size: 1rem;
+	}
+.phone {
+    font-family: PT Sans Narrow;
+    font-style: normal;
+    padding-right: 2rem;
+    line-height: 1.4rem;
+}
+.top-but {
+    background: #fff;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    color: #000;
+    font-family: PT Sans Narrow;
+	border-radius:0.5rem;
+}
+header.main-header {
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+}
+ul.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.main-menu li {
+    display: inline-block;
+    padding: 1rem 0.8rem 0.75rem 0.8rem;
+}
+.main-menu li a{
+font-family: PT Sans Narrow;
+font-style: normal;
+font-weight: normal;
+font-size: 1.2rem;
+line-height: 1.8rem;
+display: flex;
+align-items: center;
+text-align: center;
+color: #2E2E2E;
+}
+.main-menu li a:hover, .main-menu li a:active {
+    border-bottom: 0.15rem solid #03A9F4;
+}
+.blue-but {
+    background: #0075BE;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+	border-radius:0.75rem;
+}
+.blue-but:hover {
+    background: #34a5db;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+}
+.main-menu li .last {
+	border-bottom:none ! important;
+}
+.screen1{
+	background: url(file:///C:/Users/Голубцовы/Desktop/Vector.png);
+    background-position-x: right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+	padding: 0 15%;
+	display:inline-block;}
+.screen2{
+	background: url(file:///C:/Users/Голубцовы/Desktop/Vector-2.png);
+    background-position-x: right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+	padding: 0 15%;
+	display:inline-block;}
+.screen3{
+	background: url(file:///C:/Users/Голубцовы/Downloads/Vector3.png);
+    background-position-x: left;
+    background-size: 25%;
+    background-repeat: no-repeat;
+	padding: 0 15%;
+	display:inline-block;}	
+.screen1 .col2 img {
+    width: 80%;
+    padding: 0 10% 20% 10%;
+}
+.col2 {
+    width: 50%;
+    float: left;
+}
+.col4 {
+    width: 21%;
+    padding-right: 5%;
+    height: auto;
+    float: left;
+    text-align: center;
+    display: inline-block;
+}
+.col4:nth-child(4) {
+    padding-right: 0px;
+}
+.title{
+font-family: PT Sans Narrow;
+font-style: normal;
+font-weight: bold;
+font-size: 3rem;
+line-height: 4.7rem;
+padding-top: 4rem;
+text-transform: uppercase;
+color: #005B97;}
+.descr{
+font-family: PT Sans Narrow;
+font-style: normal;
+font-weight: normal;
+font-size: 1.5rem;
+line-height: 2.4rem;
+display: flex;
+align-items: center;
+color: #5F5F5F;
+padding-bottom:2rem;}
+a.big-button-2 {
+    background: #34a5db;
+    color: #fff;
+    font-family: PT Sans Narrow;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.75rem 5rem;
+    border-radius: 5rem;
+}
+a.big-button-2:hover{
+    background: #34a5db;
+}
+a.big-button {
+    background: #005b97;
+    color: #fff;
+    font-family: PT Sans Narrow;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.75rem 5rem;
+    border-radius: 5rem;
+}
+a.big-button:hover{
+    background: #34a5db;
+}
+h2{
+font-family: PT Sans Narrow;
+font-style: normal;
+font-weight: bold;
+font-size: 2.3rem;
+line-height: 3.2rem;
+padding-top: 4rem;
+text-align: center;
+text-transform: uppercase;
+color: #005B97;}
+p.z3 {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #005B97;
+    margin: 0px;
+}
+.screen2 .col4 img {
+    width: 80%;
+	padding:0 10%;
+}
+p{font-size:1.2rem;}
+p.opis {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+.row.o-nas {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+.o-nas .col2:nth-child(2) {
+    text-align: right;
+    padding-left: 17%;
+    width: 33%;
+    font-size: 1.2rem;
+}
+.o-nas img{
+width:70%;}
+.col2 img{
+width:100%;}
+#delivery, #partner{
+width:48%; padding-right:1rem;}
+#partner{
+text-align:right;}
+footer .header-wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-top: 2rem;
+}
+span.phone, span.mail {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5d5d5d;
+}
+.screen3 a.big-button{
+margin-right:2rem;}
+@media screen and (max-device-width: 630px){
+html{
+font-size:20px;}
+.main-header {
+    position: relative;
+    background: none;
+}
+.top-menu{
+display:none;}
+.col4{
+width:100%;}
+.o-nas .col2:nth-child(2),#delivery, #partner {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 2rem;
+}
+.disclaimer .logo{
+display:none;}
+#delivery h2{
+text-align:center ! important;}
+.screen3 a.big-button, .screen3 a.big-button-2 {
+    width: 50%;
+    margin-right: 0px;
+    float: none;
+    display: inline-block;
+}
+.screen3 a.big-button-2{margin-top:2rem;}
+.row.o-nas{
+margin-bottom:2rem;}
+.navigation {
+    width: 33%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
+    list-style: none;
+    background: #f4f4f4;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+footer .header-wrapper {
+    display: inline-block;
+	margin-top: 2rem;
+}
+span.phone, span.mail {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.col2{
+width:100%;}}
+@media screen and (min-device-width: 631px) and (max-device-width: 991px){
+html {
+    font-size: 21px ! important;
+}
+.screen3 a.big-button, .screen3 a.big-button-2 {
+    width: 50%;
+    margin-right: 0px;
+    float: none;
+    display: inline-block;
+}
+.screen3 a.big-button-2{margin-top:2rem;}
+a.logo {
+    width: 100%;
+}
+
+a.logo img {
+    width: 40%;
+    padding: 1% 30%;
+}
+footer .header-wrapper {
+    display: inline-block;
+	margin-top: 2rem;
+}
+span.phone, span.mail {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.o-nas .col2:nth-child(2) {
+    text-align: center;
+    padding-left: 0%;
+    width: 100%;
+    font-size: 1.2rem;
+	padding-top:2rem;
+}
+.col2, #delivery, #partner{
+width:100%;}
+.descr{
+font-size:1.2rem;
+line-height:1.7rem;
+padding-bottom:1rem;}
+.screen1 .col2 img{
+width:90%;
+padding: 0 5% 20% 5%}
+a.big-button, .screen3 a.big-button-2{font-size: 1rem;
+    padding: 0.25rem 2rem;
+    border-radius: 3rem;}
+.top-menu .phone, .top-but{
+font-size:0.8rem;}
+.main-menu li{
+padding:0.3rem 0.5rem;}
+.main-menu li a{
+font-size:1rem;}
+.title{
+font-size:2rem;
+line-height:2.7rem;
+margin-top:0;
+padding-top:0;}
+nav {
+    width: 80%;
+    text-align: center;
+	padding:0 10%;
+}
+ul.main-menu{
+text-align:center;}
+.col4 {
+    width: 45%;
+}
+
+footer a.logo {
+    display: none;
+}
+}
+@media screen and (min-device-width: 992px) and (max-device-width: 1274px){
+html{
+font-size:14px;}
+}
+@media screen and (min-device-width: 992px) and (max-device-width: 1117px){
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+a.logo {
+    width: 100%;
+    text-align: center;
+}
+
+a.logo img {
+    width: 20%;
+}
+}
+</style>
+</head>
+<body>
+        <ul class="navigation">
+        <li class="nav-item"><a itemprop="url" href="/"><img src="file:///C:/Users/Голубцовы/Desktop/potok-logo_Монтажная область 1.png"></a></li>
+    <li class="nav-item"><a itemprop="url" href="#kompani">О компании</a></li>
+    <li class="nav-item" itemprop="name"><a itemprop="url" href="#delivery">Транспортным компаниям</a></li>
+    <li class="nav-item"><a itemprop="url" href="#partner">Партнерам</a></li>
+    <li class="nav-item" itemprop="name" class="zvonok"><a itemprop="url" href="#contact">Контакты</a></li>
+<li class="nav-item" itemprop="name"><a itemprop="url" href="#autor"><span class="blue-but">Регистрация</span></a></li>
+        </ul>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+<div class="screen1">
+<div class="top-menu"><span class="phone">Мы всегда рады помочь:  +7(927)-123-00-00</span><a class="top-but" href="">Личный кабинет</a></div>
+<header class="main-header">
+    <div class="header-wrapper">
+<a class="logo" href="#"><img src="file:///C:/Users/Голубцовы/Desktop/potok-logo_Монтажная область 1.png"></a></a>
+      <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul class="main-menu">
+ <li class="nav-item"><a itemprop="url" href="#kompani">О компании</a></li>
+    <li class="nav-item" itemprop="name"><a itemprop="url" href="#delivery">Транспортным компаниям</a></li>
+    <li class="nav-item"><a itemprop="url" href="#partner">Партнерам</a></li>
+    <li class="nav-item" itemprop="name" class="zvonok"><a itemprop="url" href="#contact">Контакты</a></li>
+<li class="nav-item" itemprop="name"><a itemprop="url" class="last" href="#autor"><span class="blue-but">Регистрация</span></a></li>
+        </ul>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+      </nav>
+    </div>
+  </header>
+</nav>
+<div class="col2">
+<p class="title">Мы делаем мир ближе</p>
+<p class="descr">Поток – удобный сервис для быстрой доставки посылок в малые населенные пункты</p>
+<a href="" class="big-button">Подключиться</a>
+</div>
+<div class="col2">
+<img src="file:///C:/Users/Голубцовы/Desktop/292-01 2.png">
+</div>
+</div>
+<div id="kompani" class="screen2">
+<h2>Как мы это делаем</h2>
+<div class="row">
+<div class="col4">
+<img src="file:///C:/Users/Голубцовы/Desktop/icon_Монтажная область 1.png">
+<p class="z3">Быстрее</p>
+<p class="opis">Больше не надо ждать пока скопятся посылки до дальних пригородных точек доставки</p></div>
+<div class="col4">
+<img src="file:///C:/Users/Голубцовы/Desktop/icon-02.png">
+<p class="z3">Доступнее</p>
+<p class="opis">Вы сможете доставлять в любой населенный пункт, где есть продуктовый магазин</p>
+</div>
+<div class="col4">
+<img src="file:///C:/Users/Голубцовы/Desktop/icon-03.png">
+<p class="z3">Проще</p>
+<p class="opis">Вам больше не надо думать о водителе, траспорте и ГСМ, это ложиться на партнера</p>
+</div>
+<div class="col4">
+<img src="file:///C:/Users/Голубцовы/Desktop/icon-04.png">
+<p class="z3">Безопаснее</p>
+<p class="opis">Мы работаем лишь с компаниями,  гарантирующими сохранность груза</p>
+</div>
+</div>
+<div class="row o-nas">
+<div class="col2">
+<img src="file:///C:/Users/Голубцовы/Downloads/potok-logo_Монтажная область 1.png">
+</div>
+<div class="col2">
+«Поток» создает новые возможности для транспортной компании в области расширения географии доставки, а наши партнеры получают дополнительные источники доходов от привычных операций.</div>
+</div>
+<div class="row">
+<div id="delivery" class="col2">
+<h2 style="text-align:left;padding-top:1rem;">Для кого наш сервис</h2>
+<p>Если ты доставляешь посылки в пригород и тебе приходится ждать пока сформируется минимальный пул отправки, то этот сервис специально для тебя.</p>
+<p style="padding-bottom:2rem;">Наши партнеры, минимум раз в неделю курсируют в пригородном направлении и готовы помочь вам с доставкой и выдачей ваших посылок получателям.</p>
+<a href="" class="big-button">Подключиться</a>
+</div>
+<div class="col2"><img src="file:///C:/Users/Голубцовы/Desktop/tp-2.png"></div>
+</div>
+</div>
+<div class="screen3">
+<div class="row">
+<div class="col2"><img src="file:///C:/Users/Голубцовы/Desktop/mg_Монтажная область 1.png"></div>
+<div class="col2" id="partner">
+<h2 style="text-align:right;padding-top:1rem;">Кто наши партнеры</h2>
+<p>Предприниматели, работающие в сфере торговли и услуг на территории малых населенных пунктов. Сотрудничество с «Потоком» - это возможность зарабатывать на обеспечении глобального транспортно-логистического коммерческого товарооборота.</p>
+<p style="padding-bottom:2rem;">Выдача посылок через Вашу торгово-сервисную точку обеспечивает устойчивый поток клиентов, которые по статистике, получив посылку, в 50% случаев или совершают покупку или пользуются Вашими услугами.  </p>
+<a href="" class="big-button">Подключиться</a>
+</div>
+</div>
+<div style="text-align:center;"class="row">
+<p  class="title">Если вы все еще думаете</p>
+<p style="text-align:center; padding-bottom:2rem;">Заключив с нами агентский договор, вы сможете включиться в рабочий процесс в любой момент. «Поток» доступен везде.<br>Начало работы в «Потоке» не требует затрат. Бесплатная установка мобильного приложения и его настройка займут всего несколько минут. <br>Получить / выдать посылку можно с любого устройства - нажмите одну кнопку, и посылка автоматически отображается как полученная / выданная. </p>
+<p><a  href="" class="big-button">Хочу стать партнером</a> <a href="" class="big-button-2">Я транспортная компания</a></p>
+</div>
+</div>
+<footer class="disclaimer"  itemscope itemtype="http://schema.org/WPFooter">
+<div class="main-header">
+    <div class="header-wrapper">
+<a class="logo" href="#"><img src="file:///C:/Users/Голубцовы/Desktop/potok-logo_Монтажная область 1.png"></a><span class="phone"> +7(927)-123-00-00</span><span class="mail">info@potok.ru</span>
+
+    </div>
+  </div>
+</nav>
+</footer>
+</div>
+</body>
+</html>
